@@ -34,7 +34,7 @@ const CourseRegistrationForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://perfectconsult-erp.test/api/register-course', {
+            const response = await axios.post('https://admin.perfectconsult.bg/api/register-course', {
                 ...formData,
                 birth_date: formData.birth_date ? formData.birth_date.toISOString().split('T')[0] : '' // Format date to YYYY-MM-DD
             }, {
