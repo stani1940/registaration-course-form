@@ -44,7 +44,10 @@ const CourseRegistrationForm = () => {
             });
             setSuccessMessage(response.data.message);
             setErrors({});
-            window.location.reload();
+            setTimeout(() => {
+                window.location.reload();
+            }, 5000);
+
         } catch (error) {
             if (error.response && error.response.data.errors) {
                 setErrors(error.response.data.errors);
